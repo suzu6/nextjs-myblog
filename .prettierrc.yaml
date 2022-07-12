@@ -1,0 +1,6 @@
+# Only add semicolons at the beginning of lines that may introduce ASI failures.
+semi: false
+# Use single quotes instead of double quotes.
+singleQuote: true
+endOfLine: "lf"
+tabWidth: 2
