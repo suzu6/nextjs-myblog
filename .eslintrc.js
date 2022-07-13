@@ -50,9 +50,4 @@ module.exports = {
     },
     'import/resolver': 'webpack',
   },
-  parserOptions: {
-    ecmaVersion: 12,
-    tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
-  },
 }
