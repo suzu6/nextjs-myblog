@@ -8,20 +8,17 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/warnings',
-    'plugin:react/recommended',
     'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'prettier',
   ],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 12,
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'import', 'unused-imports'],
+  plugins: ['import', 'unused-imports'],
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     'react/jsx-uses-react': 'off',
@@ -54,17 +51,7 @@ module.exports = {
         ],
       },
     ],
-    '@typescript-eslint/no-unused-vars': 'off',
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: '/',
-      },
-    },
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 }
