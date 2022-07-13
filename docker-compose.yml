@@ -16,3 +16,5 @@ services:
       - node_modules_volume:/workspace/node_modules
     working_dir: /workspace
     tty: true
+    environment:
+      - WATCHPACK_POLLING=true
