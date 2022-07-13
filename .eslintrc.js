@@ -13,17 +13,15 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module',
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', '@typescript-eslint', 'import', 'unused-imports'],
+  plugins: ['react', 'import', 'unused-imports'],
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     'react/jsx-uses-react': 'off',
