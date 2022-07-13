@@ -7,7 +7,7 @@ module.exports = {
     'next/core-web-vitals',
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:import/warnings',
+    'plugin:import/typescript',
     'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
@@ -28,6 +28,7 @@ module.exports = {
     'import/order': [
       'warn',
       {
+        // グループ順かつアルファベット順に並べる。グループごとに１行空ける。
         groups: [
           'builtin',
           'external',
@@ -41,14 +42,6 @@ module.exports = {
         'newlines-between': 'always',
         pathGroupsExcludedImportTypes: ['builtin'],
         alphabetize: { order: 'asc', caseInsensitive: true },
-        pathGroups: [
-          { pattern: 'src/types/**', group: 'internal', position: 'before' },
-          {
-            pattern: 'src/repositories/**',
-            group: 'internal',
-            position: 'before',
-          },
-        ],
       },
     ],
     'no-unused-vars': 'off',
