@@ -4,20 +4,15 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'next/core-web-vitals',
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@next/next/recommended',
     'prettier',
   ],
-  parserOptions: {
-    ecmaVersion: 12,
-    tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
-  },
   plugins: ['import', 'unused-imports'],
   ignorePatterns: ['.eslintrc.js'],
   rules: {
@@ -46,5 +41,11 @@ module.exports = {
     ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
+  },
+  // Abobe Warning: React version not specified in eslint-plugin-react settings.
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 }
