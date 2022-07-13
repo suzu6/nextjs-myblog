@@ -18,7 +18,8 @@ module.exports = {
   rules: {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': 'off',
+    'import/no-relative-parent-imports': 'error',
     'unused-imports/no-unused-imports': 'error',
     'import/order': [
       'warn',
@@ -47,5 +48,11 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': 'webpack',
+  },
+  parserOptions: {
+    ecmaVersion: 12,
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
   },
 }
