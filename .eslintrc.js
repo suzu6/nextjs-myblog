@@ -13,8 +13,7 @@ module.exports = {
     'plugin:@next/next/recommended',
     'prettier',
   ],
-  plugins: ['import', 'unused-imports'],
-  ignorePatterns: ['.eslintrc.js'],
+  plugins: ['unused-imports'],
   rules: {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -24,7 +23,7 @@ module.exports = {
     'import/order': [
       'warn',
       {
-        // グループ順かつアルファベット順に並べる。グループごとに１行空ける。
+        // グループ順かつアルファベット順に並べる。
         groups: [
           'builtin',
           'external',
@@ -35,7 +34,7 @@ module.exports = {
           'object',
           'type',
         ],
-        'newlines-between': 'always',
+        'newlines-between': 'never',
         pathGroupsExcludedImportTypes: ['builtin'],
         alphabetize: { order: 'asc', caseInsensitive: true },
       },
