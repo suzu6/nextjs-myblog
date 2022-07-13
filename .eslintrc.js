@@ -19,7 +19,7 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/no-unresolved': 'off',
-    'import/no-relative-parent-imports': 'error',
+    'import/no-relative-parent-imports': 'warn',
     'unused-imports/no-unused-imports': 'error',
     'import/order': [
       'warn',
